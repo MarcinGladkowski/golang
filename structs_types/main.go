@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+type ID int
 
 type Person struct {
 	Name string
@@ -8,8 +12,8 @@ type Person struct {
 }
 
 type User struct {
-	Person Person
-	ID     string
+	Person
+	ID ID
 }
 
 func HelloPerson(u User) {
@@ -18,6 +22,8 @@ func HelloPerson(u User) {
 
 func main() {
 
+	var id ID = 1001
+
 	p := Person{
 		Name: "Gopher",
 		Age:  10,
@@ -25,8 +31,11 @@ func main() {
 
 	u := User{
 		Person: p,
-		ID:     "123-xyz",
+		ID:     id,
 	}
 
+	notInitialized := User{}
+
 	HelloPerson(u)
+	HelloPerson(notInitialized) // zeroes
 }
