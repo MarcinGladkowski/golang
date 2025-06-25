@@ -1,7 +1,7 @@
 package main
 
 import (
-	"basic/fib"
+	"basic/initial/fib"
 	"fmt"
 )
 
@@ -9,7 +9,7 @@ func main() {
 	sequence := fib.FibonacciSequence(10)
 
 	// This would result in an error
-	// firstFibonacciNumber := fib.fibonacci(1)
+	// firstFibonacciNumber := initial.fibonacci(1)
 
 	fmt.Println("Fibonacci sequence of first 10 numbers:")
 	fmt.Println(sequence)
