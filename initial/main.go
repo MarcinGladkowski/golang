@@ -1,8 +1,8 @@
 package main
 
 import (
-	"basic/initial/fib"
 	"fmt"
+	
 )
 
 func main() {
